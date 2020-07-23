@@ -29,3 +29,4 @@ app.use('/users',userRouter)
 app.listen(port, ()=>{
     console.log(`server is runing on port: ${port}`)
 })
+
