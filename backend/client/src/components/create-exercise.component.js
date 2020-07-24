@@ -46,14 +46,14 @@ export default class CreateExercise extends Component{
         date:this.state.date
         }
         console.log(exercise)
-        axios.post("http://localhost:5000/exercises/add",exercise)
+        axios.post("/exercises/add",exercise)
         .then(res =>console.log(res.data))
 
         window.location="/"
     }
 
     componentDidMount=()=>{
-        axios.get("http://localhost:5000/users/")
+        axios.get("/users")
         .then(res=>{
             if(res.data.length>0){
                 this.setState({
